@@ -1,160 +1,191 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NEXUS CREATIVE</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS CREATIVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <body>
-        <header>
-            <div class="header__logo">
-                <a href="#"><img src="images/logo.png" alt="ロゴ画像"></a>
-            </div>
-            <div class="header__nav">
-                <ul class="nav__links">
-                    <li><a href="index.html">TOP</a></li>
-                    <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
-        <main>
-            <section class="hero" id="top">
-                <div class="hero__content">
-                    <p class="hero__catchphrase">「つながりから、価値を創る」</p>
-                    <a href="/contact.html" class="hero__btn">お問い合わせ</a>
-                </div>
-            </section>
-            <section class="service">
-                <div class="section__header">
-                    <p class="section__en">SERVICE</p>
-                    <h2 class="section__ja">サービス内容</h2>
-                </div>
-                <div class="service__list">
-                    <div class="service__item">
-                        <img src="images/service1.jpg" alt="サービス画像1">
-                        <h3 class="service__title">Web制作</h3>
-                        <p class="service__text">お客様のビジネスに合わせた<br>オリジナルWebサイトを制作します。</p>
-                    </div>
-                    <div class="service__item">
-                        <img src="images/service2.jpg" alt="サービス画像2">
-                        <h3 class="service__title">デザイン</h3>
-                        <p class="service__text">ユーザーの心を掴む、美しく機能的な<br>デザインを提供します。</p>
-                    </div>
-                    <div class="service__item">
-                        <img src="images/service3.jpg" alt="サービス画像3">
-                        <h3 class="service__title">コーディング</h3>
-                        <p class="service__text">最新技術を用いた高品質な<br>コーディングで理想のサイトを実現します。</p>
-                    </div>
-                </div>
-            </section>
-            <section class="achievements">
-                <div class="section__header">
-                    <p class="section__en">ACHIEVEMENTS</p>
-                    <h2 class="section__ja">制作実績</h2>
-                </div>
-                <div class="tab__buttons">
-                    <button class="tab__btn active" data-tab="web">Webサイト</button>
-                    <button class="tab__btn" data-tab="lp">LP</button>
-                    <button class="tab__btn" data-tab="corporate">コーポレート</button>
-                </div>
-                <div class="tab__contents">
-                    <div class="tab__content active" id="web">
-                        <img src="images/achievements1.jpg" alt="実績画像1">
-                        <h3>Webサイト</h3>
-                        <p>クライアントのブランドイメージに合わせた<br>オリジナルWebサイトを制作しました。</p>
-                    </div>
-                    <div class="tab__content" id="lp">
-                        <img src="images/achievements2.jpg" alt="実績画像2">
-                        <h3>LP</h3>
-                        <p>商品・サービスの魅力を最大限に伝える<br>高転換率のランディングページを制作しました。</p>
-                    </div>
-                    <div class="tab__content" id="corporate">
-                        <img src="images/achievements3.jpg" alt="実績画像3">
-                        <h3>コーポレート</h3>
-                        <p>企業の信頼感・誠実さを表現した<br>コーポレートサイトを制作しました。</p>
-                    </div>
-                </div>
-            </section>
-            <section class="faq">
-                <div class="section__header">
-                    <p class="section__en">FAQ</p>
-                    <h2 class="section__ja">よくある質問</h2>
-                </div>
-                <div class="faq__item">
-                    <h3 class="faq__question">制作期間はどのくらいかかりますか？</h3>
-                    <p class="faq__answer">サイトの規模にもよりますが、<br>LP：1〜2週間<br>コーポレートサイト：3〜4週間<br>が目安となっております。</p>
-                </div>
-                <div class="faq__item">
-                    <h3 class="faq__question">料金はどのくらいかかりますか？</h3>
-                    <p class="faq__answer">サイトの規模・ページ数・機能によって<br>異なります。まずはお気軽にお問い合わせ<br>ください。</p>
-                </div>
-                <div class="faq__item">
-                    <h3 class="faq__question">修正は何回までできますか？</h3>
-                    <p class="faq__answer">納品前であれば回数制限なく修正対応<br>いたします。納品後の修正については<br>別途ご相談ください。</p>
-                </div>
-                <div class="faq__item">
-                    <h3 class="faq__question">どんな業種でも対応できますか？</h3>
-                    <p class="faq__answer">飲食店・美容・医療・不動産など<br>幅広い業種に対応しております。<br>お気軽にご相談ください。</p>
-                </div>
-                <div class="faq__item">
-                    <h3 class="faq__question">WordPressでの制作は可能ですか？</h3>
-                    <p class="faq__answer">はい、可能です。更新しやすい<br>WordPressサイトの制作も承っております。</p>
-                </div>
-            </section>
-            <section class="contact">
-                <div class="section__header">
-                    <p class="section__en">CONTACT</p>
-                    <h2 class="section__ja">お問い合わせ</h2>
-                </div>
-                <p class="contact__text">お気軽にお問い合わせください</p>
-                <form class="contact__form" id="contactForm">
-                    <div class="contact__item">
-                        <label>お名前<span class="required">必須</span></label>
-                        <input type="text" name="name" placeholder="山田　太郎">
-                        <p class="error__message" id="nameError"></p>
-                    </div>
-                    <div class="contact__item">
-                        <label>メールアドレス<span class="required">必須</span></label>
-                        <input type="email" name="email" placeholder="example@email.com">
-                        <p class="error__message" id="emailError"></p>
-                    </div>
-                    <div class="contact__item">
-                        <label>お問い合わせ内容<span class="required">必須</span></label>
-                        <textarea name="message" placeholder="お問い合わせ内容をご入力ください"></textarea>
-                        <p class="error__message" id="messageError"></p>
-                    </div>
-                    <button type="submit" class="contact__btn">送信する</button>
-                </form>
-            </section>
-        </main>
-        <footer>
-            <div class="footer__content">
-                <div class="footer__info">
-                    <div class="footer__logo">
-                        <a href="#"><img src="images/logo.png" alt="ロゴ画像"></a>
-                    </div>
-                    <p class="footer__address">〒163-8001　東京都新宿区新宿2-8-1</p>
-                    <p class="footer__tel">TEL：03-1234-5678</p>
-                </div>
-                <div class="footer__nav">
-                    <ul class="nav__links">
-                        <li><a href="index.html">TOP</a></li>
-                        <li><a href="service.html">SERVICE</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="footer__copyright">&copy; 2026 NEXUS CREATIVE</p>
-        </footer>
-    </body>
+  <body>
+    <header>
+      <div class="header__logo">
+        <a href="#"><img src="images/logo.png" alt="ロゴ画像" /></a>
+      </div>
+      <div class="header__nav">
+        <ul class="nav__links">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="service.html">SERVICE</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero__content">
+          <p class="hero__catchphrase">「つながりから、価値を創る」</p>
+          <a href="/contact.html" class="hero__btn">お問い合わせ</a>
+        </div>
+      </section>
+      <section class="service">
+        <div class="section__header">
+          <p class="section__en">SERVICE</p>
+          <h2 class="section__ja">サービス内容</h2>
+        </div>
+        <div class="service__list">
+          <div class="service__item">
+            <img src="images/service1.jpg" alt="サービス画像1" />
+            <h3 class="service__title">Web制作</h3>
+            <p class="service__text">
+              お客様のビジネスに合わせた<br />オリジナルWebサイトを制作します。
+            </p>
+          </div>
+          <div class="service__item">
+            <img src="images/service2.jpg" alt="サービス画像2" />
+            <h3 class="service__title">デザイン</h3>
+            <p class="service__text">
+              ユーザーの心を掴む、美しく機能的な<br />デザインを提供します。
+            </p>
+          </div>
+          <div class="service__item">
+            <img src="images/service3.jpg" alt="サービス画像3" />
+            <h3 class="service__title">コーディング</h3>
+            <p class="service__text">
+              最新技術を用いた高品質な<br />コーディングで理想のサイトを実現します。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="achievements">
+        <div class="section__header">
+          <p class="section__en">ACHIEVEMENTS</p>
+          <h2 class="section__ja">制作実績</h2>
+        </div>
+        <div class="tab__buttons">
+          <button class="tab__btn active" data-tab="web">Webサイト</button>
+          <button class="tab__btn" data-tab="lp">LP</button>
+          <button class="tab__btn" data-tab="corporate">コーポレート</button>
+        </div>
+        <div class="tab__contents">
+          <div class="tab__content active" id="web">
+            <img src="images/achievements1.jpg" alt="実績画像1" />
+            <h3>Webサイト</h3>
+            <p>
+              クライアントのブランドイメージに合わせた<br />オリジナルWebサイトを制作しました。
+            </p>
+          </div>
+          <div class="tab__content" id="lp">
+            <img src="images/achievements2.jpg" alt="実績画像2" />
+            <h3>LP</h3>
+            <p>
+              商品・サービスの魅力を最大限に伝える<br />高転換率のランディングページを制作しました。
+            </p>
+          </div>
+          <div class="tab__content" id="corporate">
+            <img src="images/achievements3.jpg" alt="実績画像3" />
+            <h3>コーポレート</h3>
+            <p>
+              企業の信頼感・誠実さを表現した<br />コーポレートサイトを制作しました。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="section__header">
+          <p class="section__en">FAQ</p>
+          <h2 class="section__ja">よくある質問</h2>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__question">制作期間はどのくらいかかりますか？</h3>
+          <p class="faq__answer">
+            サイトの規模にもよりますが、<br />LP：1〜2週間<br />コーポレートサイト：3〜4週間<br />が目安となっております。
+          </p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__question">料金はどのくらいかかりますか？</h3>
+          <p class="faq__answer">
+            サイトの規模・ページ数・機能によって<br />異なります。まずはお気軽にお問い合わせ<br />ください。
+          </p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__question">修正は何回までできますか？</h3>
+          <p class="faq__answer">
+            納品前であれば回数制限なく修正対応<br />いたします。納品後の修正については<br />別途ご相談ください。
+          </p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__question">どんな業種でも対応できますか？</h3>
+          <p class="faq__answer">
+            飲食店・美容・医療・不動産など<br />幅広い業種に対応しております。<br />お気軽にご相談ください。
+          </p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__question">WordPressでの制作は可能ですか？</h3>
+          <p class="faq__answer">
+            はい、可能です。更新しやすい<br />WordPressサイトの制作も承っております。
+          </p>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="section__header">
+          <p class="section__en">CONTACT</p>
+          <h2 class="section__ja">お問い合わせ</h2>
+        </div>
+        <p class="contact__text">お気軽にお問い合わせください</p>
+        <form class="contact__form" id="contactForm">
+          <div class="contact__item">
+            <label>お名前<span class="required">必須</span></label>
+            <input type="text" name="name" placeholder="山田　太郎" />
+            <p class="error__message" id="nameError"></p>
+          </div>
+          <div class="contact__item">
+            <label>メールアドレス<span class="required">必須</span></label>
+            <input type="email" name="email" placeholder="example@email.com" />
+            <p class="error__message" id="emailError"></p>
+          </div>
+          <div class="contact__item">
+            <label>お問い合わせ内容<span class="required">必須</span></label>
+            <textarea
+              name="message"
+              placeholder="お問い合わせ内容をご入力ください"
+            ></textarea>
+            <p class="error__message" id="messageError"></p>
+          </div>
+          <button type="submit" class="contact__btn">送信する</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__content">
+        <div class="footer__info">
+          <div class="footer__logo">
+            <a href="#"><img src="images/logo.png" alt="ロゴ画像" /></a>
+          </div>
+          <p class="footer__address">〒163-8001　東京都新宿区新宿2-8-1</p>
+          <p class="footer__tel">TEL：03-1234-5678</p>
+        </div>
+        <div class="footer__nav">
+          <ul class="nav__links">
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="service.html">SERVICE</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; 2026 NEXUS CREATIVE</p>
+    </footer>
+  </body>
 </html>
