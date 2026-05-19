@@ -283,7 +283,7 @@ header {
 .contact__label {
   display: block;
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   color: #1a3a5c;
 }
 
@@ -331,4 +331,54 @@ header {
   color: #ffffff;
   padding: 2px 6px;
   border-radius: 3px;
+}
+
+footer {
+  padding: 60px 40px 20px;
+  background-color: var(--main-color);
+  color: #ffffff;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer__logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.footer__address,
+.footer__tel {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.footer__nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.footer__nav a:hover {
+  color: #ffffff;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
 }
