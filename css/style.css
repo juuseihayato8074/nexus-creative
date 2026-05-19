@@ -262,3 +262,73 @@ header {
 .faq__answer.active {
   display: block;
 }
+
+.contact {
+  background-color: var(--sb-bg);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.contact__text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact__label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #1a3a5c;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 24px;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-family: "Noto Sans JP", serif;
+  font-size: 16px;
+}
+
+.contact textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--main-color);
+  color: #f8f9fa;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: "Noto Sans JP", serif;
+  cursor: pointer;
+}
+
+.error__message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.required {
+  font-size: 12px;
+  margin-left: 8px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
