@@ -233,3 +233,32 @@ header {
   padding: 0 20px 20px;
   line-height: 1.8;
 }
+
+.faq__item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.faq__question {
+  font-size: 20px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.faq__answer {
+  font-size: 15px;
+  color: var(--accent-color);
+  margin-top: 15px;
+  line-height: 1.8;
+  display: none;
+}
+
+.faq__answer.active {
+  display: block;
+}
