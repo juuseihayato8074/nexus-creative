@@ -13,23 +13,21 @@ navLinks.forEach(function (link) {
   });
 });
 
-try {
-  const swiper = new Swiper(".hero__swiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-} catch (e) {
-  console.log(`Swiper error:`, e);
-}
+const swiper = new Swiper(".hero__swiper", {
+  loop: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 const tabBtns = document.querySelectorAll(`.tab__btn`);
 const tabContents = document.querySelectorAll(`.tab__content`);

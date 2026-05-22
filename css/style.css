@@ -29,7 +29,7 @@ header {
   z-index: 100;
 }
 
-.header__logo {
+.header__logo img {
   width: 100px;
 }
 
@@ -64,6 +64,7 @@ header {
 .hero {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .hero__swiper {
@@ -71,10 +72,30 @@ header {
   height: 100%;
 }
 
-.swiper__slide img {
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff !important;
+  z-index: 10;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px !important;
+  color: #ffffff;
 }
 
 .hero__content {
