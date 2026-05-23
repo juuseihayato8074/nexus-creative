@@ -52,3 +52,30 @@ questions.forEach(function (question) {
     answer.classList.toggle(`active`);
   });
 });
+
+const animateElements = document.querySelectorAll(`.animate`);
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(`visible`);
+        entry.target.addEventListener(
+          `transitionend`,
+          function () {
+            entry.target.classList.remove(`animate`);
+          },
+          { once: true }
+        );
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
+
+animateElements.forEach(function (el) {
+  observer.observe(el);
+});
