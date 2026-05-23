@@ -14,7 +14,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -189,17 +188,23 @@
         <p class="contact__text">お気軽にお問い合わせください</p>
         <form class="contact__form" id="contactForm">
           <div class="contact__item">
-            <label>お名前<span class="required">必須</span></label>
+            <label class="contact__label"
+              >お名前<span class="required">必須</span></label
+            >
             <input type="text" name="name" placeholder="山田　太郎" />
             <p class="error__message" id="nameError"></p>
           </div>
           <div class="contact__item">
-            <label>メールアドレス<span class="required">必須</span></label>
+            <label class="contact__label"
+              >メールアドレス<span class="required">必須</span></label
+            >
             <input type="email" name="email" placeholder="example@email.com" />
             <p class="error__message" id="emailError"></p>
           </div>
           <div class="contact__item">
-            <label>お問い合わせ内容<span class="required">必須</span></label>
+            <label class="contact__label"
+              >お問い合わせ内容<span class="required">必須</span></label
+            >
             <textarea
               name="message"
               placeholder="お問い合わせ内容をご入力ください"
