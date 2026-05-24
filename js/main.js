@@ -13,21 +13,23 @@ navLinks.forEach(function (link) {
   });
 });
 
-const swiper = new Swiper(".hero__swiper", {
-  loop: false,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+if (document.querySelector(`.hero__swiper`)) {
+  const swiper = new Swiper(`.hero__swiper`, {
+    loop: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
 
 const tabBtns = document.querySelectorAll(`.tab__btn`);
 const tabContents = document.querySelectorAll(`.tab__content`);
@@ -124,7 +126,20 @@ contactForm.addEventListener(`submit`, function (e) {
   }
 
   if (isValid) {
-    alert(`送信が完了しました。お問い合わせありがとうございます。`);
-    contactForm.reset();
+    const formData = new FormData(contactForm);
+    fetch(`contact.php`, {
+      method: `POST`,
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.message);
+        if (data.success) {
+          contactForm.reset();
+        }
+      })
+      .catch(() => {
+        alert(`通信エラーが発生しました`);
+      });
   }
 });
