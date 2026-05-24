@@ -107,3 +107,43 @@
   font-size: 14px;
   line-height: 1.8;
 }
+
+@media (max-width: 768px) {
+  .price {
+    padding: 60px 20px;
+  }
+
+  .price__list {
+    flex-direction: column;
+  }
+
+  .price__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .price__detail li::before {
+    padding-right: 5px;
+    position: relative;
+  }
+
+  .flow {
+    padding: 60px 20px;
+  }
+
+  .flow__list {
+    flex-direction: column;
+  }
+
+  .flow__item {
+    width: 100%;
+  }
+
+  .flow__text {
+    font-size: 13px;
+  }
+
+  .cta {
+    padding: 60px 20px;
+  }
+}
