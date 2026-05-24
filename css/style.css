@@ -44,6 +44,10 @@ header {
   color: #ffffff;
 }
 
+.nav__active {
+  color: var(--accent-color) !important;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
