@@ -66,3 +66,44 @@
   position: absolute;
   left: 0;
 }
+
+.flow {
+  background-color: var(--bg-color);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.flow__list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.flow__item {
+  background-color: var(--sb-bg);
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 25%;
+  text-align: left;
+  position: relative;
+}
+
+.flow__step {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+}
+
+.flow__title {
+  font-size: 18px;
+  color: var(--main-color);
+  margin-bottom: 12px;
+}
+
+.flow__text {
+  font-size: 14px;
+  line-height: 1.8;
+}
