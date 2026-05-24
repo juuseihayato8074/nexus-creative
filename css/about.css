@@ -107,3 +107,56 @@
   font-size: 14px;
   line-height: 2;
 }
+
+.br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .about__hero {
+    padding: 60px 20px;
+  }
+
+  .about__hero-lead {
+    font-size: 22px;
+  }
+
+  .company {
+    padding: 60px 20px;
+  }
+
+  .company__table {
+    margin: 0 auto;
+  }
+
+  .company__table th,
+  .company__table td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .member {
+    padding: 60px 20px;
+  }
+
+  .member__content {
+    flex-direction: column;
+  }
+
+  .member__img-wrap {
+    width: 200px;
+    height: 200px;
+  }
+
+  .member__info {
+    text-align: center;
+  }
+
+  .member__text {
+    font-size: 13px;
+  }
+
+  .br {
+    display: block;
+  }
+}
