@@ -79,3 +79,52 @@ const observer = new IntersectionObserver(
 animateElements.forEach(function (el) {
   observer.observe(el);
 });
+
+const contactForm = document.getElementById(`contactForm`);
+
+contactForm.addEventListener(`submit`, function (e) {
+  e.preventDefault();
+
+  const name = contactForm.querySelector(`input[name="name"]`);
+  const email = contactForm.querySelector(`input[name="email"]`);
+  const message = contactForm.querySelector(`textarea[name="message"]`);
+
+  const nameError = document.getElementById(`nameError`);
+  const emailError = document.getElementById(`emailError`);
+  const messageError = document.getElementById(`messageError`);
+
+  [nameError, emailError, messageError].forEach((el) => {
+    el.textContent = ``;
+    el.style.display = `none`;
+  });
+
+  let isValid = true;
+
+  if (name.value.trim() === ``) {
+    nameError.textContent = `お名前を入力してください`;
+    nameError.style.display = `block`;
+    isValid = false;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email.value.trim() === ``) {
+    emailError.textContent = `メールアドレスを入力してください`;
+    emailError.style.display = `block`;
+    isValid = false;
+  } else if (!emailRegex.test(email.value.trim())) {
+    emailError.textContent = `正しいメールアドレスを入力してください`;
+    emailError.style.display = `block`;
+    isValid = false;
+  }
+
+  if (message.value.trim() === ``) {
+    messageError.textContent = `お問い合わせ内容を入力してください`;
+    messageError.style.display = `block`;
+    isValid = false;
+  }
+
+  if (isValid) {
+    alert(`送信が完了しました。お問い合わせありがとうございます。`);
+    contactForm.reset();
+  }
+});
