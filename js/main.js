@@ -84,62 +84,64 @@ animateElements.forEach(function (el) {
 
 const contactForm = document.getElementById(`contactForm`);
 
-contactForm.addEventListener(`submit`, function (e) {
-  e.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener(`submit`, function (e) {
+    e.preventDefault();
 
-  const name = contactForm.querySelector(`input[name="name"]`);
-  const email = contactForm.querySelector(`input[name="email"]`);
-  const message = contactForm.querySelector(`textarea[name="message"]`);
+    const name = contactForm.querySelector(`input[name="name"]`);
+    const email = contactForm.querySelector(`input[name="email"]`);
+    const message = contactForm.querySelector(`textarea[name="message"]`);
 
-  const nameError = document.getElementById(`nameError`);
-  const emailError = document.getElementById(`emailError`);
-  const messageError = document.getElementById(`messageError`);
+    const nameError = document.getElementById(`nameError`);
+    const emailError = document.getElementById(`emailError`);
+    const messageError = document.getElementById(`messageError`);
 
-  [nameError, emailError, messageError].forEach((el) => {
-    el.textContent = ``;
-    el.style.display = `none`;
-  });
+    [nameError, emailError, messageError].forEach((el) => {
+      el.textContent = ``;
+      el.style.display = `none`;
+    });
 
-  let isValid = true;
+    let isValid = true;
 
-  if (name.value.trim() === ``) {
-    nameError.textContent = `お名前を入力してください`;
-    nameError.style.display = `block`;
-    isValid = false;
-  }
+    if (name.value.trim() === ``) {
+      nameError.textContent = `お名前を入力してください`;
+      nameError.style.display = `block`;
+      isValid = false;
+    }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (email.value.trim() === ``) {
-    emailError.textContent = `メールアドレスを入力してください`;
-    emailError.style.display = `block`;
-    isValid = false;
-  } else if (!emailRegex.test(email.value.trim())) {
-    emailError.textContent = `正しいメールアドレスを入力してください`;
-    emailError.style.display = `block`;
-    isValid = false;
-  }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.value.trim() === ``) {
+      emailError.textContent = `メールアドレスを入力してください`;
+      emailError.style.display = `block`;
+      isValid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+      emailError.textContent = `正しいメールアドレスを入力してください`;
+      emailError.style.display = `block`;
+      isValid = false;
+    }
 
-  if (message.value.trim() === ``) {
-    messageError.textContent = `お問い合わせ内容を入力してください`;
-    messageError.style.display = `block`;
-    isValid = false;
-  }
+    if (message.value.trim() === ``) {
+      messageError.textContent = `お問い合わせ内容を入力してください`;
+      messageError.style.display = `block`;
+      isValid = false;
+    }
 
-  if (isValid) {
-    const formData = new FormData(contactForm);
-    fetch(`contact.php`, {
-      method: `POST`,
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        alert(data.message);
-        if (data.success) {
-          contactForm.reset();
-        }
+    if (isValid) {
+      const formData = new FormData(contactForm);
+      fetch(`contact.php`, {
+        method: `POST`,
+        body: formData,
       })
-      .catch(() => {
-        alert(`通信エラーが発生しました`);
-      });
-  }
-});
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.message);
+          if (data.success) {
+            contactForm.reset();
+          }
+        })
+        .catch(() => {
+          alert(`通信エラーが発生しました`);
+        });
+    }
+  });
+}
