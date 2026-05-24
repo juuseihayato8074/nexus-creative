@@ -186,7 +186,13 @@
           <h2 class="section__ja">お問い合わせ</h2>
         </div>
         <p class="contact__text">お気軽にお問い合わせください</p>
-        <form class="contact__form" id="contactForm">
+        <form
+          class="contact__form"
+          id="contactForm"
+          action="contact.php"
+          method="POST"
+          novalidate
+        >
           <div class="contact__item">
             <label class="contact__label"
               >お名前<span class="required">必須</span></label
