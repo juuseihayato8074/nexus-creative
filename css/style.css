@@ -46,6 +46,7 @@ header {
 
 .nav__active {
   color: var(--accent-color) !important;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .hamburger {

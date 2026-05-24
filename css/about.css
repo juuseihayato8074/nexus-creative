@@ -1,0 +1,31 @@
+:root {
+  --main-color: #1a3a5c;
+  --accent-color: #00b4d8;
+  --text-color: #2d2d2d;
+  --bg-color: #ffffff;
+  --sb-bg: #f8f9fa;
+}
+
+.about__hero {
+  background-color: var(--main-color);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about__hero .section__en,
+.about__hero .section__ja {
+  color: #ffffff;
+}
+
+.about__hero-lead {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about__hero-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 2;
+}
